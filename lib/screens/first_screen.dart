@@ -28,6 +28,7 @@ class FirstScreen extends StatelessWidget {
               onClick: () {
                 print('Sign in Button Clicked!');
               },
+              colorsList: const [Colors.pink, Colors.purple],
               text: 'Sign in',
             ),
             const SizedBox(height: 20),
@@ -42,6 +43,7 @@ class FirstScreen extends StatelessWidget {
               onClick: () {
                 print('Register Button Clicked!');
               },
+              colorsList: const [Colors.blue, Colors.teal],
               text: 'Register',
             ),
           ],

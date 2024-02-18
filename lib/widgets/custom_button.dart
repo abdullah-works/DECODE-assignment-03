@@ -5,21 +5,26 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onClick,
+    required this.colorsList,
   });
 
   final String text;
   final void Function() onClick;
+  final List<Color> colorsList;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onClick,
       child: Container(
-        color: Colors.black45,
         margin: const EdgeInsets.all(8),
         alignment: Alignment.center,
         width: 200,
         height: 40,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: colorsList),
+          borderRadius: BorderRadius.circular(20),
+        ),
         child: Text(
           text,
           style: const TextStyle(
